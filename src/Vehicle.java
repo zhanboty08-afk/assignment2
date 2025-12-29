@@ -1,13 +1,10 @@
 public abstract class Vehicle {
-
-    // ===== FIELDS =====
     protected int id;
     protected static int idGen = 1;
     protected String model;
     protected int year;
     protected double basePrice;
 
-    // ===== CONSTRUCTOR =====
     protected Vehicle(String model, int year, double basePrice) {
         this.id = idGen++;
         setModel(model);
@@ -15,7 +12,6 @@ public abstract class Vehicle {
         setBasePrice(basePrice);
     }
 
-    // ===== GETTERS / SETTERS =====
     public int getId() {
         return id;
     }
@@ -50,14 +46,12 @@ public abstract class Vehicle {
         this.basePrice = basePrice;
     }
 
-    // ===== METHODS =====
     public int getAge(int currentYear) {
         return currentYear - year;
     }
 
     public abstract double calculateInsuranceFee();
 
-    @Override
     public String toString() {
         return "ID: " + id +
                 ", Model: " + model +
